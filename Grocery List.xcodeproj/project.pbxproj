@@ -19,6 +19,9 @@
 		6561CFD41890918300103743 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6561CFBC1890918300103743 /* UIKit.framework */; };
 		6561CFDC1890918300103743 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6561CFDA1890918300103743 /* InfoPlist.strings */; };
 		6561CFDE1890918300103743 /* Grocery_ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6561CFDD1890918300103743 /* Grocery_ListTests.m */; };
+		65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA4F18909CCE00264A0C /* UNOItem.m */; };
+		65A5DA5418909D2300264A0C /* UNOItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA5218909D2300264A0C /* UNOItemViewController.m */; };
+		65A5DA5518909D2300264A0C /* UNOItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A5DA5318909D2300264A0C /* UNOItemViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		6561CFD91890918300103743 /* Grocery ListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Grocery ListTests-Info.plist"; sourceTree = "<group>"; };
 		6561CFDB1890918300103743 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6561CFDD1890918300103743 /* Grocery_ListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Grocery_ListTests.m; sourceTree = "<group>"; };
+		65A5DA4E18909CCE00264A0C /* UNOItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOItem.h; sourceTree = "<group>"; };
+		65A5DA4F18909CCE00264A0C /* UNOItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOItem.m; sourceTree = "<group>"; };
+		65A5DA5118909D2300264A0C /* UNOItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOItemViewController.h; sourceTree = "<group>"; };
+		65A5DA5218909D2300264A0C /* UNOItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOItemViewController.m; sourceTree = "<group>"; };
+		65A5DA5318909D2300264A0C /* UNOItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNOItemViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,11 @@
 				6561CFC81890918300103743 /* UNOAppDelegate.m */,
 				6561CFCA1890918300103743 /* Images.xcassets */,
 				6561CFBF1890918300103743 /* Supporting Files */,
+				65A5DA4E18909CCE00264A0C /* UNOItem.h */,
+				65A5DA4F18909CCE00264A0C /* UNOItem.m */,
+				65A5DA5118909D2300264A0C /* UNOItemViewController.h */,
+				65A5DA5218909D2300264A0C /* UNOItemViewController.m */,
+				65A5DA5318909D2300264A0C /* UNOItemViewController.xib */,
 			);
 			path = "Grocery List";
 			sourceTree = "<group>";
@@ -220,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A5DA5518909D2300264A0C /* UNOItemViewController.xib in Resources */,
 				6561CFC31890918300103743 /* InfoPlist.strings in Resources */,
 				6561CFCB1890918300103743 /* Images.xcassets in Resources */,
 			);
@@ -242,6 +256,8 @@
 			files = (
 				6561CFC51890918300103743 /* main.m in Sources */,
 				6561CFC91890918300103743 /* UNOAppDelegate.m in Sources */,
+				65A5DA5418909D2300264A0C /* UNOItemViewController.m in Sources */,
+				65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +460,7 @@
 				6561CFE31890918300103743 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6561CFE41890918300103743 /* Build configuration list for PBXNativeTarget "Grocery ListTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +469,7 @@
 				6561CFE61890918300103743 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

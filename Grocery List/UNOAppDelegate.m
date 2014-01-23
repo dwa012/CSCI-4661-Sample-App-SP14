@@ -7,6 +7,7 @@
 //
 
 #import "UNOAppDelegate.h"
+#import "UNOItemViewController.h"
 
 @implementation UNOAppDelegate
 
@@ -16,6 +17,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+    UNOItemViewController* vc = [[UNOItemViewController alloc] initWithNibName:@"UNOItemViewController" bundle:nil];
+
+    [self.window setRootViewController:vc];
+
     return YES;
 }
 
