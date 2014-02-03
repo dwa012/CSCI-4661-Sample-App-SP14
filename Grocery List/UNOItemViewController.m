@@ -9,7 +9,6 @@
 #import "UNOItemViewController.h"
 
 @interface UNOItemViewController ()
-
 @end
 
 @implementation UNOItemViewController
@@ -35,4 +34,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)goDoIt:(id)sender {
+    [sender setTitle:@"WHOOO!!!" forState:UIControlStateNormal];
+}
 @end
