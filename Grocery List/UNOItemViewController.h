@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UNOItemViewController : UIViewController
+- (IBAction)buttonPressed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIImageView *catImage;
 @end

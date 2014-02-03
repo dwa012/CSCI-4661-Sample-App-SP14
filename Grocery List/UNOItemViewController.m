@@ -33,4 +33,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)buttonPressed:(id)sender {
+    
+    float degrees = -90.0;
+    float radians = (degrees/180.0) * M_PI;
+    
+    // now animate the view...
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         _catImage.transform = CGAffineTransformMakeRotation(radians);
+                     }
+                     completion:nil];
+    
+
+}
 @end
