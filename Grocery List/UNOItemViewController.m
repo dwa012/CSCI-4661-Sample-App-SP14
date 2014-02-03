@@ -33,8 +33,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)goDoIt:(id)sender {
-    [sender setTitle:@"WHOOO!!!" forState:UIControlStateNormal];
-}
 @end

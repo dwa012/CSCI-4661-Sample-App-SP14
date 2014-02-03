@@ -10,7 +10,4 @@
 
 @interface UNOItemViewController : UIViewController
 
-
-- (IBAction)goDoIt:(id)sender;
-
 @end
