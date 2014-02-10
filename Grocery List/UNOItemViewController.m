@@ -38,7 +38,7 @@
 - (IBAction)buttonPressed:(id)sender {
     
     float degrees = -90.0;
-    float radians = (degrees/180.0) * M_PI;
+    float radians = (float) ((degrees/180.0) * M_PI);
     
     // now animate the view...
     [UIView animateWithDuration:1.0
@@ -48,6 +48,12 @@
                          _catImage.transform = CGAffineTransformMakeRotation(radians);
                      }
                      completion:nil];
+    
+    
+    //jgjhjhgghjghj
+    //jgjhgjhghjghhj
+    
+    
     
 
 }

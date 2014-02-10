@@ -22,6 +22,7 @@
 		65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA4F18909CCE00264A0C /* UNOItem.m */; };
 		65A5DA5418909D2300264A0C /* UNOItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA5218909D2300264A0C /* UNOItemViewController.m */; };
 		65A5DA5518909D2300264A0C /* UNOItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A5DA5318909D2300264A0C /* UNOItemViewController.xib */; };
+		65ECE4F118A2C34B001D083A /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65ECE4F018A2C34B001D083A /* cat.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		65A5DA5118909D2300264A0C /* UNOItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOItemViewController.h; sourceTree = "<group>"; };
 		65A5DA5218909D2300264A0C /* UNOItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOItemViewController.m; sourceTree = "<group>"; };
 		65A5DA5318909D2300264A0C /* UNOItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNOItemViewController.xib; sourceTree = "<group>"; };
+		65ECE4F018A2C34B001D083A /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		6561CFBE1890918300103743 /* Grocery List */ = {
 			isa = PBXGroup;
 			children = (
+				65ECE4EF18A2C2F7001D083A /* Images */,
 				6561CFC71890918300103743 /* UNOAppDelegate.h */,
 				6561CFC81890918300103743 /* UNOAppDelegate.m */,
 				6561CFCA1890918300103743 /* Images.xcassets */,
@@ -155,6 +158,14 @@
 				6561CFDA1890918300103743 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65ECE4EF18A2C2F7001D083A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				65ECE4F018A2C34B001D083A /* cat.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 			files = (
 				65A5DA5518909D2300264A0C /* UNOItemViewController.xib in Resources */,
 				6561CFC31890918300103743 /* InfoPlist.strings in Resources */,
+				65ECE4F118A2C34B001D083A /* cat.jpg in Resources */,
 				6561CFCB1890918300103743 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
