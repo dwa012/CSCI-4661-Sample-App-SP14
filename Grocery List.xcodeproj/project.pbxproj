@@ -22,6 +22,8 @@
 		65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA4F18909CCE00264A0C /* UNOItem.m */; };
 		65A5DA5418909D2300264A0C /* UNOItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA5218909D2300264A0C /* UNOItemViewController.m */; };
 		65A5DA5518909D2300264A0C /* UNOItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A5DA5318909D2300264A0C /* UNOItemViewController.xib */; };
+		65ECE4F518A9A17D001D083A /* UNOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECE4F318A9A17D001D083A /* UNOSecondViewController.m */; };
+		65ECE4F618A9A17D001D083A /* UNOSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ECE4F418A9A17D001D083A /* UNOSecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		65A5DA5118909D2300264A0C /* UNOItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOItemViewController.h; sourceTree = "<group>"; };
 		65A5DA5218909D2300264A0C /* UNOItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOItemViewController.m; sourceTree = "<group>"; };
 		65A5DA5318909D2300264A0C /* UNOItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNOItemViewController.xib; sourceTree = "<group>"; };
+		65ECE4F218A9A17D001D083A /* UNOSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOSecondViewController.h; sourceTree = "<group>"; };
+		65ECE4F318A9A17D001D083A /* UNOSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOSecondViewController.m; sourceTree = "<group>"; };
+		65ECE4F418A9A17D001D083A /* UNOSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNOSecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,9 @@
 		6561CFBE1890918300103743 /* Grocery List */ = {
 			isa = PBXGroup;
 			children = (
+				65ECE4F218A9A17D001D083A /* UNOSecondViewController.h */,
+				65ECE4F318A9A17D001D083A /* UNOSecondViewController.m */,
+				65ECE4F418A9A17D001D083A /* UNOSecondViewController.xib */,
 				6561CFC71890918300103743 /* UNOAppDelegate.h */,
 				6561CFC81890918300103743 /* UNOAppDelegate.m */,
 				6561CFCA1890918300103743 /* Images.xcassets */,
@@ -234,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65A5DA5518909D2300264A0C /* UNOItemViewController.xib in Resources */,
+				65ECE4F618A9A17D001D083A /* UNOSecondViewController.xib in Resources */,
 				6561CFC31890918300103743 /* InfoPlist.strings in Resources */,
 				6561CFCB1890918300103743 /* Images.xcassets in Resources */,
 			);
@@ -258,6 +267,7 @@
 				6561CFC91890918300103743 /* UNOAppDelegate.m in Sources */,
 				65A5DA5418909D2300264A0C /* UNOItemViewController.m in Sources */,
 				65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */,
+				65ECE4F518A9A17D001D083A /* UNOSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

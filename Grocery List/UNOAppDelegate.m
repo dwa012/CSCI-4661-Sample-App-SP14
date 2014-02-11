@@ -18,9 +18,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
+    UINavigationController *nav = [[UINavigationController alloc] init];
     UNOItemViewController* vc = [[UNOItemViewController alloc] initWithNibName:@"UNOItemViewController" bundle:nil];
 
-    [self.window setRootViewController:vc];
+    [nav initWithRootViewController:vc];
+
+    [self.window setRootViewController:nav];
+    [self.window setTintColor:[UIColor redColor]];
 
     return YES;
 }

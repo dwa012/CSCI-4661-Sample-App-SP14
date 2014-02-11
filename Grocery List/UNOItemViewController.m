@@ -7,6 +7,7 @@
 //
 
 #import "UNOItemViewController.h"
+#import "UNOSecondViewController.h"
 
 @interface UNOItemViewController ()
 @end
@@ -26,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self setTitle:@"cool app"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,5 +38,11 @@
 
 - (IBAction)goDoIt:(id)sender {
     [sender setTitle:@"WHOOO!!!" forState:UIControlStateNormal];
+
+    NSArray *data = [[NSArray alloc] initWithObjects:@"my cool text", nil];
+    NSMutableArray *mdata = [data mutableCopy];
+
+    UNOSecondViewController *vc = [[UNOSecondViewController alloc] initWithNibName:@"UNOSecondViewController" bundle:nil data:@[@"yo"]];
+    [[self navigationController] pushViewController:vc animated:YES];
 }
 @end
