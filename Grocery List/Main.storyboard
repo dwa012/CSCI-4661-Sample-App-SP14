@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aSI-bN-NUj">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5eT-XB-zrR">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="aSI-bN-NUj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zN2-30-asB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ykq-rA-OOH" kind="relationship" relationship="rootViewController" id="QiE-o1-bHj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14I-5l-RTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-305" y="398"/>
+        </scene>
+        <!--Item View Controller-->
+        <scene sceneID="yu4-MU-2fm">
+            <objects>
+                <viewController id="Ykq-rA-OOH" customClass="UNOItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8F-Dd-unl"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ON-gL-Nk1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L9Z-92-T9W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aSx-8G-UNu">
+                                <rect key="frame" x="89" y="103" width="129" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbk-aB-xcU">
+                                <rect key="frame" x="112" y="303" width="82" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Segue 1"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Ykq-rA-OOH" eventType="touchUpInside" id="4lk-Lq-gaE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5q-DN-1jI">
+                                <rect key="frame" x="102" y="386" width="102" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Segue 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTwoPressed:" destination="Ykq-rA-OOH" eventType="touchUpInside" id="vET-qd-uZ8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DfI-MZ-jzk"/>
+                    <connections>
+                        <outlet property="catImage" destination="aSx-8G-UNu" id="bHO-h5-bgf"/>
+                        <segue destination="yAs-Ag-jY0" kind="push" identifier="SegueToScene1" id="zYQ-fb-DAY"/>
+                        <segue destination="5zw-eE-bnn" kind="push" identifier="SegueToScene2" id="NNu-1R-Ihy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O3x-Ii-F1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="398"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="9jT-qT-M8R">
+            <objects>
+                <viewController id="yAs-Ag-jY0" customClass="UNOSecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5VV-6r-9x1"/>
+                        <viewControllerLayoutGuide type="bottom" id="OPV-XN-y12"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZcL-I2-bUP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat2.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="BxB-l8-qUm">
+                                <rect key="frame" x="46" y="216" width="228" height="136"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4O1-mq-2iT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7b-I3-gUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="0.0"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="4Ay-YF-0GK">
+            <objects>
+                <viewController id="5zw-eE-bnn" customClass="UNOThirdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHM-Ec-QCH"/>
+                        <viewControllerLayoutGuide type="bottom" id="uob-kc-Bpe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N6I-bS-IDN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="POG-Bu-Fcp">
+                                <rect key="frame" x="50" y="132" width="221" height="159"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2cf-Jx-8qg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zX0-MA-0fu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="793"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat.jpg" width="1317" height="1536"/>
+        <image name="cat2.jpeg" width="300" height="168"/>
+        <image name="cat3.jpg" width="1280" height="800"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

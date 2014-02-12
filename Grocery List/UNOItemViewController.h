@@ -10,4 +10,8 @@
 
 @interface UNOItemViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *catImage;
+
+- (IBAction)buttonPressed:(id)sender;
+- (IBAction)buttonTwoPressed:(id)sender;
 @end
