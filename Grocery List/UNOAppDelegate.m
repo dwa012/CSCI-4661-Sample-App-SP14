@@ -7,7 +7,6 @@
 //
 
 #import "UNOAppDelegate.h"
-#import "UNOItemViewController.h"
 
 @implementation UNOAppDelegate
 

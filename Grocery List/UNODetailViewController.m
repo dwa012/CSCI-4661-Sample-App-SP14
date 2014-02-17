@@ -1,18 +1,21 @@
 //
-//  UNOSecondViewController.m
+//  UNODetailViewController.m
 //  Grocery List
 //
-//  Created by daniel on 2/12/14.
+//  Created by daniel on 2/17/14.
 //  Copyright (c) 2014 UNO CSCI. All rights reserved.
 //
 
-#import "UNOSecondViewController.h"
+#import "UNODetailViewController.h"
 
-@interface UNOSecondViewController ()
+@interface UNODetailViewController ()
 
 @end
 
-@implementation UNOSecondViewController
+@implementation UNODetailViewController
+
+@synthesize data = _data;
+@synthesize image =_image;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,14 +28,13 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+  [super viewDidLoad];
+  [_image setImage:[UIImage imageNamed:[_data objectForKey:@"image"]]];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
 }
 
 @end
