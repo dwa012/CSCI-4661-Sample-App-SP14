@@ -20,12 +20,6 @@
 		6561CFDC1890918300103743 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6561CFDA1890918300103743 /* InfoPlist.strings */; };
 		6561CFDE1890918300103743 /* Grocery_ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6561CFDD1890918300103743 /* Grocery_ListTests.m */; };
 		657521A218ABFEF300083E76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657521A118ABFEF300083E76 /* Main.storyboard */; };
-		658BBED718B29C8900C95698 /* UNOGroceryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BBED618B29C8900C95698 /* UNOGroceryListTableViewController.m */; };
-		658BBEDC18B29FDC00C95698 /* bread.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 658BBED818B29FDC00C95698 /* bread.jpg */; };
-		658BBEDD18B29FDC00C95698 /* butter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 658BBED918B29FDC00C95698 /* butter.jpg */; };
-		658BBEDE18B29FDC00C95698 /* cereal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 658BBEDA18B29FDC00C95698 /* cereal.jpg */; };
-		658BBEDF18B29FDC00C95698 /* milk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 658BBEDB18B29FDC00C95698 /* milk.jpg */; };
-		658BBEE218B2A00600C95698 /* UNODetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BBEE118B2A00600C95698 /* UNODetailViewController.m */; };
 		65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA4F18909CCE00264A0C /* UNOItem.m */; };
 /* End PBXBuildFile section */
 
@@ -57,14 +51,6 @@
 		6561CFDB1890918300103743 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6561CFDD1890918300103743 /* Grocery_ListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Grocery_ListTests.m; sourceTree = "<group>"; };
 		657521A118ABFEF300083E76 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		658BBED518B29C8900C95698 /* UNOGroceryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOGroceryListTableViewController.h; sourceTree = "<group>"; };
-		658BBED618B29C8900C95698 /* UNOGroceryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOGroceryListTableViewController.m; sourceTree = "<group>"; };
-		658BBED818B29FDC00C95698 /* bread.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bread.jpg; sourceTree = "<group>"; };
-		658BBED918B29FDC00C95698 /* butter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = butter.jpg; sourceTree = "<group>"; };
-		658BBEDA18B29FDC00C95698 /* cereal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cereal.jpg; sourceTree = "<group>"; };
-		658BBEDB18B29FDC00C95698 /* milk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = milk.jpg; sourceTree = "<group>"; };
-		658BBEE018B2A00600C95698 /* UNODetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNODetailViewController.h; sourceTree = "<group>"; };
-		658BBEE118B2A00600C95698 /* UNODetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNODetailViewController.m; sourceTree = "<group>"; };
 		65A5DA4E18909CCE00264A0C /* UNOItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOItem.h; sourceTree = "<group>"; };
 		65A5DA4F18909CCE00264A0C /* UNOItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,10 +82,6 @@
 		653F5D4D18A0382D000E6BD2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				658BBED818B29FDC00C95698 /* bread.jpg */,
-				658BBED918B29FDC00C95698 /* butter.jpg */,
-				658BBEDA18B29FDC00C95698 /* cereal.jpg */,
-				658BBEDB18B29FDC00C95698 /* milk.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -181,10 +163,6 @@
 		657521E718AC0C2E00083E76 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				658BBED518B29C8900C95698 /* UNOGroceryListTableViewController.h */,
-				658BBED618B29C8900C95698 /* UNOGroceryListTableViewController.m */,
-				658BBEE018B2A00600C95698 /* UNODetailViewController.h */,
-				658BBEE118B2A00600C95698 /* UNODetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -275,12 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6561CFC31890918300103743 /* InfoPlist.strings in Resources */,
-				658BBEDD18B29FDC00C95698 /* butter.jpg in Resources */,
-				658BBEDF18B29FDC00C95698 /* milk.jpg in Resources */,
 				6561CFCB1890918300103743 /* Images.xcassets in Resources */,
-				658BBEDC18B29FDC00C95698 /* bread.jpg in Resources */,
 				657521A218ABFEF300083E76 /* Main.storyboard in Resources */,
-				658BBEDE18B29FDC00C95698 /* cereal.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,9 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6561CFC51890918300103743 /* main.m in Sources */,
-				658BBED718B29C8900C95698 /* UNOGroceryListTableViewController.m in Sources */,
 				6561CFC91890918300103743 /* UNOAppDelegate.m in Sources */,
-				658BBEE218B2A00600C95698 /* UNODetailViewController.m in Sources */,
 				65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
