@@ -10,4 +10,9 @@
 
 @interface UNOItem : NSObject
 
+@property (nonatomic) NSString *imageName;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *subtitle;
+@property (nonatomic) NSString *longText;
+
 @end
