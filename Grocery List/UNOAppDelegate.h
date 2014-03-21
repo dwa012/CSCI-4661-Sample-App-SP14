@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GooglePlus/GooglePlus.h>
 
 @interface UNOAppDelegate : UIResponder <UIApplicationDelegate>
 
+
 @property (strong, nonatomic) UIWindow *window;
 
++ (dispatch_queue_t)longWorkQueue;
+
++ (dispatch_queue_t)networkQueue;
 @end

@@ -12,7 +12,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  // Override point for customization after application launch.
     return YES;
 }
 
@@ -41,6 +40,39 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application: (UIApplication *)application
+            openURL: (NSURL *)url
+  sourceApplication: (NSString *)sourceApplication
+         annotation: (id)annotation {
+    return [GPPURLHandler handleURL:url
+                  sourceApplication:sourceApplication
+                         annotation:annotation];
+}
+
++ (dispatch_queue_t)longWorkQueue {
+    static dispatch_once_t pred;
+    static dispatch_queue_t sharedDispatchQueue;
+
+    dispatch_once(&pred, ^{
+        sharedDispatchQueue =
+                dispatch_queue_create("cs.uno.edu.csci4661.sp14.longtask", NULL);
+    });
+
+    return sharedDispatchQueue;
+}
+
++ (dispatch_queue_t)networkQueue {
+  static dispatch_once_t pred;
+  static dispatch_queue_t sharedDispatchQueue;
+
+  dispatch_once(&pred, ^{
+    sharedDispatchQueue =
+            dispatch_queue_create("cs.uno.edu.csci4661.sp14.network", NULL);
+  });
+
+  return sharedDispatchQueue;
 }
 
 @end
