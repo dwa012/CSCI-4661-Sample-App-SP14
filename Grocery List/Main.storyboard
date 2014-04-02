@@ -80,13 +80,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Posts" id="K8V-SC-Mrj">
-                        <barButtonItem key="rightBarButtonItem" title="New" id="WsQ-U4-dfp">
-                            <connections>
-                                <segue destination="WPC-3A-QcI" kind="push" id="2Se-zk-tBD"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Posts" id="K8V-SC-Mrj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jbk-l9-VsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,7 +132,7 @@
         <!--New Item View Controller - New Post-->
         <scene sceneID="qd6-Ct-njx">
             <objects>
-                <viewController title="New Post" id="WPC-3A-QcI" customClass="UNONewItemViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Add New Post" title="New Post" id="WPC-3A-QcI" customClass="UNONewItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pCg-1X-da7"/>
                         <viewControllerLayoutGuide type="bottom" id="6nu-b3-Reu"/>
