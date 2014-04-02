@@ -59,9 +59,9 @@
                    withSuccess:^{
                      dispatch_async(dispatch_get_main_queue(), ^{
                        [SVProgressHUD dismiss];
-                       [[self navigationController] popViewControllerAnimated:YES];
 
                        [SVProgressHUD showSuccessWithStatus:@"Sent"];
+                       [self dismissViewControllerAnimated:YES completion:nil];
                      });
                    }
                      withError:^{
