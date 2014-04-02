@@ -36,6 +36,7 @@
 		8C5A3D8CC3104C6C9B2FE93A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B827331436D48A2A8570E46 /* libPods.a */; };
 		B02F144850ABA870F98CAA59 /* UNOSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F1CC0C67766F84E922611 /* UNOSignInViewController.m */; };
 		B02F16EC84B90247800C9FDC /* UNOConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B02F13D8D5FF385E1A15F72B /* UNOConstants.m */; };
+		B02F1A3ADC7DCCF47D94EDD5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02F10871A0E79DB5252D43A /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		65C5D04718DBE048001AB40C /* UNOSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOSplashViewController.m; sourceTree = "<group>"; };
 		8B827331436D48A2A8570E46 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		98021CBE733544698534319D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B02F10871A0E79DB5252D43A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B02F13D8D5FF385E1A15F72B /* UNOConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOConstants.m; sourceTree = "<group>"; };
 		B02F1589691F5227F6775E05 /* UNOSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOSignInViewController.h; sourceTree = "<group>"; };
 		B02F1CC0C67766F84E922611 /* UNOSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOSignInViewController.m; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				6561CFBD1890918300103743 /* UIKit.framework in Frameworks */,
 				6561CFB91890918300103743 /* Foundation.framework in Frameworks */,
 				8C5A3D8CC3104C6C9B2FE93A /* libPods.a in Frameworks */,
+				B02F1A3ADC7DCCF47D94EDD5 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +163,7 @@
 				6561CFBC1890918300103743 /* UIKit.framework */,
 				6561CFD11890918300103743 /* XCTest.framework */,
 				8B827331436D48A2A8570E46 /* libPods.a */,
+				B02F10871A0E79DB5252D43A /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
