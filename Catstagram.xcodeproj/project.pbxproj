@@ -26,6 +26,7 @@
 		658BBEDE18B29FDC00C95698 /* cereal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 658BBEDA18B29FDC00C95698 /* cereal.jpg */; };
 		658BBEDF18B29FDC00C95698 /* milk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 658BBEDB18B29FDC00C95698 /* milk.jpg */; };
 		658BBEE218B2A00600C95698 /* UNODetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BBEE118B2A00600C95698 /* UNODetailViewController.m */; };
+		659B3A2018EC8C2D006D9A6B /* Catstagram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 659B3A1E18EC8C2D006D9A6B /* Catstagram.xcdatamodeld */; };
 		65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA4F18909CCE00264A0C /* UNOItem.m */; };
 		65C5D03718D15674001AB40C /* UNOFadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C5D03618D15674001AB40C /* UNOFadeSegue.m */; };
 		65C5D03B18D773D0001AB40C /* UNOApiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C5D03A18D773D0001AB40C /* UNOApiController.m */; };
@@ -75,6 +76,7 @@
 		658BBEDB18B29FDC00C95698 /* milk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = milk.jpg; sourceTree = "<group>"; };
 		658BBEE018B2A00600C95698 /* UNODetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNODetailViewController.h; sourceTree = "<group>"; };
 		658BBEE118B2A00600C95698 /* UNODetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNODetailViewController.m; sourceTree = "<group>"; };
+		659B3A1F18EC8C2D006D9A6B /* Catstagram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catstagram.xcdatamodel; sourceTree = "<group>"; };
 		65A5DA4E18909CCE00264A0C /* UNOItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOItem.h; sourceTree = "<group>"; };
 		65A5DA4F18909CCE00264A0C /* UNOItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOItem.m; sourceTree = "<group>"; };
 		65C5D03518D15674001AB40C /* UNOFadeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOFadeSegue.h; sourceTree = "<group>"; };
@@ -138,7 +140,7 @@
 		6561CFAC1890918300103743 = {
 			isa = PBXGroup;
 			children = (
-				6561CFBE1890918300103743 /* Grocery List */,
+				6561CFBE1890918300103743 /* Catstagram */,
 				6561CFD71890918300103743 /* Grocery ListTests */,
 				6561CFB71890918300103743 /* Frameworks */,
 				6561CFB61890918300103743 /* Products */,
@@ -168,7 +170,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6561CFBE1890918300103743 /* Grocery List */ = {
+		6561CFBE1890918300103743 /* Catstagram */ = {
 			isa = PBXGroup;
 			children = (
 				65C5D03F18D783CC001AB40C /* Cells */,
@@ -184,7 +186,9 @@
 				657521A118ABFEF300083E76 /* Main.storyboard */,
 				B02F1FFE22DE0FA66DE5FDCD /* UNOConstants.h */,
 				B02F13D8D5FF385E1A15F72B /* UNOConstants.m */,
+				659B3A1E18EC8C2D006D9A6B /* Catstagram.xcdatamodeld */,
 			);
+			name = Catstagram;
 			path = "Grocery List";
 			sourceTree = "<group>";
 		};
@@ -414,6 +418,7 @@
 				65C5D04818DBE048001AB40C /* UNOSplashViewController.m in Sources */,
 				65C5D03E18D7741A001AB40C /* CatstagramPost.m in Sources */,
 				6561CFC91890918300103743 /* UNOAppDelegate.m in Sources */,
+				659B3A2018EC8C2D006D9A6B /* Catstagram.xcdatamodeld in Sources */,
 				658BBEE218B2A00600C95698 /* UNODetailViewController.m in Sources */,
 				65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */,
 				65C5D04218D783E9001AB40C /* UNOPostCell.m in Sources */,
@@ -637,6 +642,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		659B3A1E18EC8C2D006D9A6B /* Catstagram.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				659B3A1F18EC8C2D006D9A6B /* Catstagram.xcdatamodel */,
+			);
+			currentVersion = 659B3A1F18EC8C2D006D9A6B /* Catstagram.xcdatamodel */;
+			path = Catstagram.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6561CFAD1890918300103743 /* Project object */;
 }
