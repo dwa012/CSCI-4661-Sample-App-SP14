@@ -25,6 +25,8 @@
 - (void)addImages:(NSSet *)values;
 - (void)removeImages:(NSSet *)values;
 
++ (Post *) getEmpty;
+
 + (NSNumber *) getMaxRemoteId;
 
 @end

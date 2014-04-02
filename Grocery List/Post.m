@@ -16,6 +16,10 @@
 @dynamic post;
 @dynamic images;
 
++ (Post *)getEmpty {
+   return nil;
+}
+
 + (NSNumber *) getMaxRemoteId {
     UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [del managedObjectContext];
