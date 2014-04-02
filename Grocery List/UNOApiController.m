@@ -12,7 +12,9 @@
 #import "UNOAppDelegate.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "GTLServicePlus.h"
+#import "Post.h"
 #import <GooglePlus/GooglePlus.h>
+#import <CoreData/CoreData.h>
 
 @implementation UNOApiController
 
@@ -23,30 +25,35 @@ static NSString* const URLString = @"https://cosmic-tenure-498.appspot.com/_ah/a
 }
 
 + (void) getPosts:(id)sender withCompletion:(void (^)(NSArray *))callbackBlock {
+
+  NSLog(@"max id: %@", [Post getMaxRemoteId]);
+
+
   NSURL *url = [[UNOApiController getApiURL] URLByAppendingPathComponent:@"post2"];
-  NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
-  AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-  operation.responseSerializer = [AFJSONResponseSerializer serializer];
+//  NSDictionary *params = @{ @"maxID" : [[Post getMaxRemoteId] stringValue] };
+  NSDictionary *params = @{ };
 
-  [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+  manager.responseSerializer = [AFJSONResponseSerializer serializer];
 
-    NSLog(@"JSON: %@", responseObject);
-    NSDictionary *result = (NSDictionary *)responseObject;
+  [manager GET:[url absoluteString]
+     parameters:params
+        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+          NSLog(@"JSON: %@", responseObject);
+          NSDictionary *result = (NSDictionary *)responseObject;
 
-    NSMutableArray* posts = [[NSMutableArray alloc] init];
+          NSMutableArray* posts = [[NSMutableArray alloc] init];
 
-    for (NSDictionary *item in [result objectForKey:@"items"]) {
-      [posts addObject:[CatstagramPost fromDictionary:item]];
-    }
+          for (NSDictionary *item in [result objectForKey:@"items"]) {
+            [posts addObject:[CatstagramPost fromDictionary:item]];
+          }
 
-    callbackBlock(posts);
-
-  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    NSLog(@"Get Post Error: %@", [error localizedDescription]);
-  }];
-
-  [operation start];
+          callbackBlock(posts);
+        }
+        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+          NSLog(@"Get Post Error: %@", [error localizedDescription]);
+        }];
 }
 
 + (void) sendPost:(CatstagramPost *)post withSuccess:(void (^)(void))successBlock withError:(void (^)(void))errorBlock {
