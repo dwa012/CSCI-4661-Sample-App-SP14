@@ -27,6 +27,8 @@
 		658BBEDF18B29FDC00C95698 /* milk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 658BBEDB18B29FDC00C95698 /* milk.jpg */; };
 		658BBEE218B2A00600C95698 /* UNODetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658BBEE118B2A00600C95698 /* UNODetailViewController.m */; };
 		659B3A2018EC8C2D006D9A6B /* Catstagram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 659B3A1E18EC8C2D006D9A6B /* Catstagram.xcdatamodeld */; };
+		659B3A2318ECBA1B006D9A6B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 659B3A2218ECBA1B006D9A6B /* Post.m */; };
+		659B3A2618ECBA1B006D9A6B /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 659B3A2518ECBA1B006D9A6B /* Image.m */; };
 		65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A5DA4F18909CCE00264A0C /* UNOItem.m */; };
 		65C5D03718D15674001AB40C /* UNOFadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C5D03618D15674001AB40C /* UNOFadeSegue.m */; };
 		65C5D03B18D773D0001AB40C /* UNOApiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C5D03A18D773D0001AB40C /* UNOApiController.m */; };
@@ -77,6 +79,10 @@
 		658BBEE018B2A00600C95698 /* UNODetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNODetailViewController.h; sourceTree = "<group>"; };
 		658BBEE118B2A00600C95698 /* UNODetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNODetailViewController.m; sourceTree = "<group>"; };
 		659B3A1F18EC8C2D006D9A6B /* Catstagram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catstagram.xcdatamodel; sourceTree = "<group>"; };
+		659B3A2118ECBA1B006D9A6B /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		659B3A2218ECBA1B006D9A6B /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		659B3A2418ECBA1B006D9A6B /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		659B3A2518ECBA1B006D9A6B /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 		65A5DA4E18909CCE00264A0C /* UNOItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOItem.h; sourceTree = "<group>"; };
 		65A5DA4F18909CCE00264A0C /* UNOItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNOItem.m; sourceTree = "<group>"; };
 		65C5D03518D15674001AB40C /* UNOFadeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNOFadeSegue.h; sourceTree = "<group>"; };
@@ -241,6 +247,10 @@
 		657521E818AC0C3C00083E76 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				659B3A2418ECBA1B006D9A6B /* Image.h */,
+				659B3A2518ECBA1B006D9A6B /* Image.m */,
+				659B3A2118ECBA1B006D9A6B /* Post.h */,
+				659B3A2218ECBA1B006D9A6B /* Post.m */,
 				65A5DA4E18909CCE00264A0C /* UNOItem.h */,
 				65A5DA4F18909CCE00264A0C /* UNOItem.m */,
 				65C5D03C18D7741A001AB40C /* CatstagramPost.h */,
@@ -417,11 +427,13 @@
 				65C5D04518D7AF84001AB40C /* UNONewItemViewController.m in Sources */,
 				65C5D04818DBE048001AB40C /* UNOSplashViewController.m in Sources */,
 				65C5D03E18D7741A001AB40C /* CatstagramPost.m in Sources */,
+				659B3A2618ECBA1B006D9A6B /* Image.m in Sources */,
 				6561CFC91890918300103743 /* UNOAppDelegate.m in Sources */,
 				659B3A2018EC8C2D006D9A6B /* Catstagram.xcdatamodeld in Sources */,
 				658BBEE218B2A00600C95698 /* UNODetailViewController.m in Sources */,
 				65A5DA5018909CCE00264A0C /* UNOItem.m in Sources */,
 				65C5D04218D783E9001AB40C /* UNOPostCell.m in Sources */,
+				659B3A2318ECBA1B006D9A6B /* Post.m in Sources */,
 				65C5D03B18D773D0001AB40C /* UNOApiController.m in Sources */,
 				65C5D03718D15674001AB40C /* UNOFadeSegue.m in Sources */,
 				B02F144850ABA870F98CAA59 /* UNOSignInViewController.m in Sources */,
