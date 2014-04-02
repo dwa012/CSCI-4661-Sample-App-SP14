@@ -16,4 +16,5 @@
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) Post *post;
 
++ (Image *)getEmpty;
 @end

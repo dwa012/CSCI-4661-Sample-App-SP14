@@ -7,12 +7,18 @@
 //
 
 #import "Image.h"
-#import "Post.h"
+#import "UNOAppDelegate.h"
 
 
 @implementation Image
 
 @dynamic url;
 @dynamic post;
+
++ (Image *)getEmpty {
+  UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
+  NSManagedObjectContext *context = [del managedObjectContext];
+  return (Image *)[NSEntityDescription insertNewObjectForEntityForName:@"Post" inManagedObjectContext:context];
+}
 
 @end

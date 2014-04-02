@@ -8,6 +8,7 @@
 
 #import "Post.h"
 #import "UNOAppDelegate.h"
+#import "Image.h"
 
 @implementation Post
 
@@ -17,8 +18,37 @@
 @dynamic images;
 
 + (Post *)getEmpty {
-   return nil;
+    UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [del managedObjectContext];
+   return (Post *)[NSEntityDescription insertNewObjectForEntityForName:@"Post" inManagedObjectContext:context];
 }
+
++ (Post *) fromDictionary:(NSDictionary *)dictionary {
+  UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
+
+  Post *result = [Post getEmpty];
+
+  result.username = [dictionary objectForKey:@"username"];
+  result.post = [dictionary objectForKey:@"post"];
+
+  NSMutableSet *images = [[NSMutableSet alloc] init];
+
+  for (NSString *image in [dictionary objectForKey:@"images"]) {
+    Image* temp = [Image getEmpty] ;
+    temp.url = image;
+
+    [images addObject:temp];
+  }
+
+  if ([images count] > 0) {
+    [result addImages:images];
+  }
+
+  [del saveContext];
+
+  return result;
+}
+
 
 + (NSNumber *) getMaxRemoteId {
     UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
