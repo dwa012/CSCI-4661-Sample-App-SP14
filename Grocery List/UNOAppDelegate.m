@@ -11,6 +11,11 @@
 
 @implementation UNOAppDelegate
 
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     return YES;
@@ -52,49 +57,65 @@
                          annotation:annotation];
 }
 
-- (NSManagedObjectContext *) managedObjectContext {
-  if (managedObjectContext != nil) {
-    return managedObjectContext;
+#pragma mark - Core Data stack
+
+// Returns the managed object context for the application.
+// If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
+- (NSManagedObjectContext *)managedObjectContext
+{
+  if (_managedObjectContext != nil) {
+    return _managedObjectContext;
   }
+
   NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
   if (coordinator != nil) {
-    managedObjectContext = [[NSManagedObjectContext alloc] init];
-    [managedObjectContext setPersistentStoreCoordinator: coordinator];
+    _managedObjectContext = [[NSManagedObjectContext alloc] init];
+    [_managedObjectContext setPersistentStoreCoordinator:coordinator];
   }
-
-  return managedObjectContext;
+  return _managedObjectContext;
 }
 
-- (NSManagedObjectModel *)managedObjectModel {
-  if (managedObjectModel != nil) {
-    return managedObjectModel;
+// Returns the managed object model for the application.
+// If the model doesn't already exist, it is created from the application's model.
+- (NSManagedObjectModel *)managedObjectModel
+{
+  if (_managedObjectModel != nil) {
+    return _managedObjectModel;
   }
-  managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-
-  return managedObjectModel;
+  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Catstagram" withExtension:@"momd"];
+  _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+  return _managedObjectModel;
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-  if (persistentStoreCoordinator != nil) {
-    return persistentStoreCoordinator;
+// Returns the persistent store coordinator for the application.
+// If the coordinator doesn't already exist, it is created and the application's store added to it.
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
+  if (_persistentStoreCoordinator != nil) {
+    return _persistentStoreCoordinator;
   }
-  NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory]
-          stringByAppendingPathComponent: @"<Project Name>.sqlite"]];
+
+  NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Catstagram.sqlite"];
+
   NSError *error = nil;
-  persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc]
-          initWithManagedObjectModel:[self managedObjectModel]];
-  if(![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
-                                               configuration:nil URL:storeUrl options:nil error:&error]) {
-    /*Error for store creation should be handled in here*/
+  _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+  if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:@{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES} error:&error]) {
+    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    abort();
   }
 
-  return persistentStoreCoordinator;
+  return _persistentStoreCoordinator;
 }
 
-- (NSString *)applicationDocumentsDirectory {
-  return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+#pragma mark - Application's Documents directory
+
+// Returns the URL to the application's Documents directory.
+- (NSURL *)applicationDocumentsDirectory
+{
+  return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark - Application's task Queues
 
 + (dispatch_queue_t)longWorkQueue {
     static dispatch_once_t pred;
