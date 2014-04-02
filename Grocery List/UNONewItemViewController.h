@@ -14,5 +14,6 @@
 
 - (IBAction)sendButton:(id)sender;
 - (IBAction)addImageSelected:(id)sender;
+- (IBAction)closeButtonSelected:(id)sender;
 
 @end

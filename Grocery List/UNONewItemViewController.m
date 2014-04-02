@@ -93,6 +93,10 @@
   [self presentViewController:picker animated:YES completion:nil]; // iPhone
 }
 
+- (IBAction)closeButtonSelected:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark UITextFieldDelegate
 
 - (void)textFieldShouldReturn:(UITextField *)textField {
