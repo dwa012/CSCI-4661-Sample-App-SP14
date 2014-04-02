@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BMSAbstractCoreDataTableViewController.h"
 
-@interface UNOTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface UNOTableViewController : BMSAbstractCoreDataTableViewController
 
 @end

@@ -14,50 +14,45 @@
 #import "UIImageView+JMImageCache.h"
 #import "SVProgressHUD.h"
 #import "UIScrollView+SVPullToRefresh.h"
+#import "Post.h"
 
 
 @interface UNOTableViewController () {
-  NSArray *data;
+
 }
 
 @end
 
 @implementation UNOTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-  self = [super initWithStyle:style];
-  if (self) {
-
-  }
-  return self;
-}
 - (id)initWithCoder:(NSCoder *)aDecoder {
-  if(self = [super initWithCoder:aDecoder]){
-
+  if(self = [super initWithCoder:aDecoder]) {
+    UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [del managedObjectContext];
   }
-
   return self;
 }
 
 - (void) initData {
-  [SVProgressHUD showWithStatus:@"Loading..."];
+  // only show the overlay if there are no items
+  if ([[[self fetchedResultsController] fetchedObjects] count] == 0){
+    [SVProgressHUD showWithStatus:@"Loading..."];
+  }
+
 
   dispatch_async([UNOAppDelegate networkQueue], ^{
 
     [UNOApiController getPosts:self withCompletion:^(NSArray *array) {
-      data = array;
+      // TODO add items to core data
 
       [SVProgressHUD dismiss];
-
-      [[self tableView] reloadData];
     }];
 
   });
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+  [super viewWillAppear:animated];
   [self initData];
 }
 
@@ -69,42 +64,44 @@
     [self initData];
   }];
 
-
   [self initData];
 }
 
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
+- (NSString *)cellIdentifier {
+  return @"Cell";
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-  return 1;
+- (NSString *)entityName {
+  return @"Post";
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-  return [data count];
+- (BOOL)shouldAllowAddNewObject {
+  return YES;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  static NSString *CellIdentifier = @"Cell";
-  UNOPostCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+- (NSArray *)fetchedSortDescriptors {
+  NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"remoteId" ascending:NO];
+  NSArray *sortDescriptors = @[sortDescriptor];
 
-  CatstagramPost *post = [data objectAtIndex:indexPath.row];
-
-  [[cell post] setText:[post post]];
-
-  if ([[post images] count] > 0) {
-    [[cell image] setImageWithURL:[NSURL URLWithString:[[post images] objectAtIndex:0]]];
-  }
-
-  return cell;
+  return sortDescriptors;
 }
+
+- (void)openAddObjectView:(id)sender {
+  UIViewController *vc = [[self storyboard] instantiateViewControllerWithIdentifier:@"Add New Post"];
+  [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+  [super configureCell:cell atIndexPath:indexPath];
+  Post *post = (Post *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
+  UNOPostCell *postCell = (UNOPostCell *)cell;
+
+  //TODO add the cell items
+}
+
+
+#pragma mark - CD Helper
+
 
 #pragma mark - Navigation
 
@@ -115,7 +112,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     UNODetailViewController *detail = [segue destinationViewController];
 
-    [detail setData:[data objectAtIndex:indexPath.row]];
+    [detail setData:[[self fetchedResultsController] objectAtIndexPath:indexPath]];
   }
 }
 
