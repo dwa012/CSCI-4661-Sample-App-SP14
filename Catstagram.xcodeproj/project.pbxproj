@@ -549,6 +549,7 @@
 				GCC_PREFIX_HEADER = "Grocery List/Catstagram-Prefix.pch";
 				INFOPLIST_FILE = "Grocery List/Catstagram-Info.plist";
 				PRODUCT_NAME = Catstagram;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -563,6 +564,7 @@
 				GCC_PREFIX_HEADER = "Grocery List/Catstagram-Prefix.pch";
 				INFOPLIST_FILE = "Grocery List/Catstagram-Info.plist";
 				PRODUCT_NAME = Catstagram;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
