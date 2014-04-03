@@ -26,7 +26,7 @@
 - (void)removeImages:(NSSet *)values;
 
 + (Post *) getEmpty;
-
++ (Post *) fromDictionary:(NSDictionary *)dictionary;
 + (NSNumber *) getMaxRemoteId;
 
 @end

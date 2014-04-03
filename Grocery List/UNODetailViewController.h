@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CatstagramPost.h"
+#import "Post.h"
 
 @interface UNODetailViewController : UIViewController
 
-@property (weak, nonatomic) CatstagramPost *data;
+@property (weak, nonatomic) Post *data;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 
 @end

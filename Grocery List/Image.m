@@ -18,7 +18,7 @@
 + (Image *)getEmpty {
   UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
   NSManagedObjectContext *context = [del managedObjectContext];
-  return (Image *)[NSEntityDescription insertNewObjectForEntityForName:@"Post" inManagedObjectContext:context];
+  return (Image *)[NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:context];
 }
 
 @end

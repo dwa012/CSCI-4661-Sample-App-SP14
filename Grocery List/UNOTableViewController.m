@@ -15,6 +15,7 @@
 #import "SVProgressHUD.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "Post.h"
+#import "Image.h"
 
 
 @interface UNOTableViewController () {
@@ -43,8 +44,6 @@
   dispatch_async([UNOAppDelegate networkQueue], ^{
 
     [UNOApiController getPosts:self withCompletion:^(NSArray *array) {
-      // TODO add items to core data
-
       [SVProgressHUD dismiss];
     }];
 

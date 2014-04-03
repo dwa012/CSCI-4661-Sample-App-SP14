@@ -30,12 +30,14 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  if ([self data]) {
-    NSURL *url = [NSURL URLWithString:[[[self data] images] objectAtIndex:0]];
-
-    [_image setImageWithURL:url
-                placeholder:[UIImage imageNamed:@"placeholder.png"]];
-  }
+    // TODO use the correct code to get the image from the post
+    
+//  if ([self data]) {
+//    NSURL *url = [NSURL URLWithString:[[[self data] images] objectAtIndex:0]];
+//
+//    [_image setImageWithURL:url
+//                placeholder:[UIImage imageNamed:@"placeholder.png"]];
+//  }
 }
 
 - (void)didReceiveMemoryWarning
