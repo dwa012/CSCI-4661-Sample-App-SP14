@@ -24,9 +24,19 @@
 }
 
 + (Post *) fromDictionary:(NSDictionary *)dictionary {
+
   UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
 
-  Post *result = [Post getEmpty];
+
+  Post *result = nil;
+
+  // try to get an existing post, if none exists then make a new one
+  if ([Post getPostWithRemoteID:[dictionary objectForKey:@"id"]]){
+    result = [Post getPostWithRemoteID:[dictionary objectForKey:@"id"]];
+  } else {
+    result = [Post getEmpty];
+    result.remoteId = [dictionary objectForKey:@"id"];
+  }
 
   result.username = [dictionary objectForKey:@"username"];
   result.post = [dictionary objectForKey:@"post"];
@@ -91,6 +101,35 @@
             return nil;
         }
     }
+}
+
++ (Post *) getPostWithRemoteID:(NSString *)remoteId {
+  UNOAppDelegate *del = (UNOAppDelegate *) [[UIApplication sharedApplication] delegate];
+  NSManagedObjectContext *context = [del managedObjectContext];
+
+  NSFetchRequest *request = [[NSFetchRequest alloc] init];
+  NSEntityDescription *entity = [NSEntityDescription entityForName:@"Post" inManagedObjectContext:context];
+  [request setEntity:entity];
+
+  // Specify that the request should return dictionaries.
+  [request setResultType:NSManagedObjectResultType];
+
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"remoteId = %@", remoteId];
+  [request setPredicate:predicate];
+
+  // Execute the fetch.
+  NSError *error;
+  NSArray *objects = [context executeFetchRequest:request error:&error];
+  if (objects == nil) {
+    return nil;
+  }
+  else {
+    if ([objects count] > 0) {
+      return (Post *)[objects objectAtIndex:0];
+    } else {
+      return nil;
+    }
+  }
 }
 
 @end

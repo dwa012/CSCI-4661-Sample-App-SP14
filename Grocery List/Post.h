@@ -16,6 +16,8 @@
 @property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSString * post;
 @property (nonatomic, retain) NSSet *images;
+
++ (Post *)getPostWithRemoteID:(NSString *)remoteId;
 @end
 
 @interface Post (CoreDataGeneratedAccessors)
