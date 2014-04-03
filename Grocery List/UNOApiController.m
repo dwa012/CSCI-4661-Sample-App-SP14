@@ -46,7 +46,7 @@ static NSString* const URLString = @"https://cosmic-tenure-498.appspot.com/_ah/a
           NSMutableArray* posts = [[NSMutableArray alloc] init];
 
           for (NSDictionary *item in [result objectForKey:@"items"]) {
-            [posts addObject:[CatstagramPost fromDictionary:item]];
+            [Post fromDictionary:item];
           }
 
           callbackBlock(posts);

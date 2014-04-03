@@ -8,6 +8,7 @@
 
 #import "UNODetailViewController.h"
 #import "UIImageView+JMImageCache.h"
+#import "Image.h"
 
 @interface UNODetailViewController ()
 
@@ -30,14 +31,12 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-    // TODO use the correct code to get the image from the post
-    
-//  if ([self data]) {
-//    NSURL *url = [NSURL URLWithString:[[[self data] images] objectAtIndex:0]];
-//
-//    [_image setImageWithURL:url
-//                placeholder:[UIImage imageNamed:@"placeholder.png"]];
-//  }
+
+  if ([_data.images count] > 0) {
+    NSArray *arr = [_data.images allObjects];
+    Image *im = (Image *)[arr objectAtIndex:0];
+    [_image setImageWithURL:[NSURL URLWithString:im.url]];
+  }
 }
 
 - (void)didReceiveMemoryWarning

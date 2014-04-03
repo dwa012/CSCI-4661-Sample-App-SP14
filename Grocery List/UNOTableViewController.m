@@ -95,7 +95,13 @@
   Post *post = (Post *)[[self fetchedResultsController] objectAtIndexPath:indexPath];
   UNOPostCell *postCell = (UNOPostCell *)cell;
 
-  //TODO add the cell items
+  postCell.post.text = post.post;
+
+  if ([post.images count] > 0) {
+    NSArray *arr = [post.images allObjects];
+    Image *im = (Image *)[arr objectAtIndex:0];
+    [postCell.image setImageWithURL:[NSURL URLWithString:im.url]];
+  }
 }
 
 
